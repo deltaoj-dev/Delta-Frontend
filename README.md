@@ -1,1 +1,1 @@
-The front-end code of DeltaOJ.
+The frontend code of DeltaOJ.
