@@ -1,0 +1,175 @@
+/*全局变量*/
+:root {
+    --first-color: #fff;
+    --second-color: #f6f6f6;
+    --third-color: #eaeaea;
+    --fourth-color: #d0d0d0;
+    --fifth-color: #aaaaaa;
+    --main-font-color: #000;
+    --secondary-font-color: #777;
+    --font-family: 'Fira Sans', sans-serif;
+}
+
+
+html, body {
+    margin: 0;
+    background-color: var(--first-color);
+}
+
+
+/*导航栏主体*/
+#top-nav-bar {
+    --top-nav-bar-height: 42px;
+
+    width: 100%;
+    height: var(--top-nav-bar-height);
+
+    background-color: var(--first-color);
+    border-bottom: solid 1px var(--fourth-color);
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: var(--font-family);
+}
+#top-nav-bar > div, #top-nav-bar > div > div {
+    width: auto;
+    height: 100%;
+}
+#top-nav-bar > div > div, #top-nav-bar > div > div > div {
+    float: left;
+}
+
+
+/*github repo 链接*/
+#github-link {
+    --github-icon-size: 28px;
+    --github-text-size: 12px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+#github-icon {
+    font-size: var(--github-icon-size);
+    width: var(--top-nav-bar-height);
+    height: var(--top-nav-bar-height);
+    text-align: center;
+}
+#github-icon > i {
+    position: absolute;
+    top: calc((var(--top-nav-bar-height) - var(--github-icon-size)) / 2);
+    transform: translateX(-50%);
+    color: var(--main-font-color);
+}
+#github-name {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#github-name > a {
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+#github-name > a > p {
+    margin: 0;
+    font-size: var(--github-text-size);
+}
+
+
+/*搜索框*/
+#search-box {
+    --search-box-height: 24px;
+    --search-box-min-width: 84px;
+    --search-box-max-width: 216px;
+}
+#search-box > form {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#search-box > form > input {
+    position: relative;
+    width: var(--search-box-min-width);
+    height: var(--search-box-height);
+    border: solid 1px var(--fourth-color);
+    border-radius: calc(var(--search-box-height) / 2);
+    background: none;
+    text-align: center;
+    color: var(--main-font-color);
+    padding-left: calc(var(--search-box-height) / 2);
+    padding-right: calc(var(--search-box-height) / 2);
+    font-family: var(--font-family);
+}
+#search-box > form > input::-webkit-input-placeholder {
+    color: var(--secondary-font-color);
+}
+#search-box > form > input:focus-visible {
+    outline: none;
+    border: solid 1px var(--fifth-color);
+}
+
+
+/*Delta Logo*/
+#delta-logo {
+    --delta-icon-size: 28px;
+    --delta-text-size: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+#delta-icon {
+    width: var(--top-nav-bar-height);
+    height: var(--top-nav-bar-height);
+}
+#delta-icon > img {
+    position: relative;
+    top: calc((var(--top-nav-bar-height) - var(--delta-icon-size)) / 2);
+    width: var(--delta-icon-size);
+    height: var(--delta-icon-size);
+}
+#delta-name {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#delta-name > p {
+    margin: 0;
+    color: var(--main-font-color);
+    font-size: var(--delta-text-size);
+}
+
+
+/*导航栏列表*/
+#delta-list {
+    --delta-list-item-padding: 16px;
+    --delta-list-item-font-size: 14px;
+}
+#delta-list > div {
+    height: 100%;
+    width: auto;
+    text-align: center;
+}
+#delta-list > div > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--main-font-color);
+    font-size: var(--delta-list-item-font-size);
+}
+#delta-list > div > a:hover {
+    background-color: var(--second-color);
+}
+#delta-list > div > a > i {
+    padding-left: var(--delta-list-item-padding);
+    padding-right: calc(var(--delta-list-item-padding) / 2);
+}
+#delta-list > div > a > p {
+    padding-left: calc(var(--delta-list-item-padding) / 2);
+    padding-right: var(--delta-list-item-padding);
+}
+#delta-list > div > a > i, #delta-list > div > a > p {
+    float: left;
+    position: relative;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
